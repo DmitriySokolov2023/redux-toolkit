@@ -1,29 +1,31 @@
-import { useState } from 'react'
-import RecipeItem from "./recipe-item/RecipeItem.jsx";
+import RecipeItem from "./components/recipe-item/RecipeItem.jsx";
 import {useSelector} from "react-redux";
-import {favoritesSlice} from "./store/favorites/favorites.slice.js";
+import {FaRegHeart} from "react-icons/fa";
+import Header from "./components/header/Header.jsx";
 
 
 function App() {
     const {favorites} = useSelector(state => state)
-  return (
+    return (
+        <section>
+          <Header/>
+            <div>
+                <RecipeItem recipe={{
+                    id: 1,
+                    name: 'Лазанья'
+                }}/>
+                <RecipeItem recipe={{
+                    id: 2,
+                    name: 'Каша'
+                }}/>
+                <RecipeItem recipe={{
+                    id: 3,
+                    name: 'Суп'
+                }}/>
+            </div>
+        </section>
 
-        <div>
-            <h1>В избранном: {favorites.length}</h1>
-            <RecipeItem recipe={{
-                id:1,
-                name:'Лазанья'
-            }}/>
-            <RecipeItem recipe={{
-                id:2,
-                name:'Каша'
-            }}/>
-            <RecipeItem recipe={{
-                id:3,
-                name:'Суп'
-            }}/>
-        </div>
-  )
+    )
 }
 
 export default App

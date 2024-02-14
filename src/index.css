@@ -12,20 +12,18 @@ body{
   font-size: 16px;
 }
 
-button{
-  background-color: #f89c9c;
-  border: none;
-  outline: none;
-  color: #fff;
-  padding: 4px 5px;
-  border-radius: 5px;
+.button{
   margin-top: 5px;
   cursor: pointer;
-  transition: background-color 0.4s ease-in-out;
+  transition: color 0.4s ease-in-out;
 }
 
-button:hover{
-  background-color: #ea5a5a;
-  transition: background-color 0.4s ease-in-out;
+.button:hover{
+  color: #ea5a5a;
+  transition: color 0.4s ease-in-out;
+}
+
+.button.active{
+  color: #ea5a5a;
 }
 

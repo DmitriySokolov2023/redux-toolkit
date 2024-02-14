@@ -1,0 +1,12 @@
+.header{
+    display: flex;
+    justify-content: end;
+    padding: 10px 10px 5px;
+}
+
+.header >span{
+    font-size: 12px;
+    position: absolute;
+    top: 0;
+    right: 5px;
+}
