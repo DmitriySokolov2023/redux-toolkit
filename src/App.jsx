@@ -1,14 +1,13 @@
 import RecipeItem from "./components/recipe-item/RecipeItem.jsx";
-import {useSelector} from "react-redux";
-import {FaRegHeart} from "react-icons/fa";
 import Header from "./components/header/Header.jsx";
+import User from "./components/user/user.jsx";
 
 
 function App() {
-    const {favorites} = useSelector(state => state)
     return (
         <section>
           <Header/>
+            <User/>
             <div>
                 <RecipeItem recipe={{
                     id: 1,
@@ -24,7 +23,6 @@ function App() {
                 }}/>
             </div>
         </section>
-
     )
 }
 
